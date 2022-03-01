@@ -1,0 +1,36 @@
+.de-button {
+  border-radius: 12px;
+  border: 3px solid #FFEF61;
+  outline: none;
+  background: inherit;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.de-button:hover {
+  transform: scale(0.98);
+}
+
+.de-button:after {
+  background: #FFEF61;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.de-button:hover:after {
+  opacity: 0.3;
+}

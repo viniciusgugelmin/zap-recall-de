@@ -1,0 +1,13 @@
+.de-game {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.de-game__logo {
+  position: absolute;
+  top: 26px;
+  left: 31px;
+}

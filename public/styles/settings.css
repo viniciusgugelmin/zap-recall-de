@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Merriweather, serif;
+  background-color: #fafafa;
+}
+
+.root {
+  display: block !important;
+  min-height: 100vh;
+}

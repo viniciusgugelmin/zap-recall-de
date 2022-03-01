@@ -1,0 +1,129 @@
+.de-card-game {
+  width: 392px;
+  height: 575px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  border: 5px solid white;
+}
+
+.de-card-game__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  height: 20px;
+}
+
+.de-card-game__title {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.de-card-game__counter {
+  position: absolute;
+  right: 0;
+}
+
+.de-card-game__content {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.de-card-game__back .de-card-game__content {
+  text-align: left;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  max-width: 294px;
+  margin: auto;
+}
+
+.de-card-game__footer {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  height: 55px;
+}
+
+.de-card-game__footer img {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.de-card-game__footer img:hover {
+  transform: scale(0.9);
+}
+
+.de-card-game__face {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all .5s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 13px;
+}
+
+.de-card-game__back {
+  transform: rotateY(180deg);
+}
+
+.de-card-game--flipped .de-card-game__back {
+  transform: rotateY(0deg);
+}
+
+.de-card-game--flipped .de-card-game__front {
+  transform: rotateY(-180deg);
+}
+
+.de-card-game__button {
+  min-height: 48px;
+  max-height: 48px;
+  min-width: 65px;
+  max-width: 65px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.de-card-game__button-black {
+  border-color: black !important;
+}
+
+.de-card-game__button-black:after {
+  background: black !important;
+}
+
+.de-card-game__button-red {
+  border-color: #F74848 !important;
+}
+
+.de-card-game__button-red:after {
+  background: #F74848 !important;
+}
+
+.de-card-game__button-green {
+  border-color: #62DB38 !important;
+}
+
+.de-card-game__button-green:after {
+  background: #62DB38 !important;
+}
+
+.de-card-game__button-yellow {
+  font-weight: bold !important;
+}

@@ -1,0 +1,25 @@
+.de-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.de-home__logo {
+  max-height: 279px;
+  max-width: 218px;
+}
+
+.de-home__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.de-home__button {
+  max-width: 90%;
+  width: 345px;
+  height: 72px;
+  gap: 7px;
+}

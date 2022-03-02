@@ -4,6 +4,8 @@
   font-family: "Roboto", sans-serif;
   position: relative;
   border: 5px solid white;
+  border-radius: 12px;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .de-card-game__header {
@@ -87,16 +89,31 @@
   transform: rotateY(-180deg);
 }
 
+.de-card-game--black {
+  border-color: black !important;
+}
+
+.de-card-game--red {
+  border-color: #F74848 !important;
+}
+
+.de-card-game--green {
+  border-color: #62DB38 !important;
+}
+
+.de-card-game--yellow {
+  border-color: #FFEF61 !important;
+}
+
 .de-card-game__button {
   min-height: 48px;
   max-height: 48px;
   min-width: 65px;
   max-width: 65px;
-  font-weight: normal;
-  font-size: 10px;
+  font-weight: normal !important;
+  font-size: 10px !important;
   line-height: 12px;
   display: flex;
-  align-items: center;
   text-align: center;
 }
 

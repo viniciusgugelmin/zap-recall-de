@@ -40,7 +40,7 @@ function App() {
   );
 
   const handleSectionChange = useCallback(
-    (section, game = null) => {
+    (section, game = null, correctAnswers = 0) => {
       const sections = ["home", "game", "end"];
 
       if (!sections.includes(section)) {

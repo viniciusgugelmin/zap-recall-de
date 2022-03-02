@@ -1,0 +1,32 @@
+.de-end {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+.de-end__logo {
+  position: absolute;
+  top: 26px;
+  left: 31px;
+}
+
+.de-end__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.de-end__subtitle {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin: 0;
+}

@@ -5,11 +5,13 @@ import Game from "./templates/Game/Game";
 
 import "./styles.css";
 import Page from "./templates/Page/Page";
+import End from "./templates/End/End";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [section, setSection] = useState("home");
   const [cards, setCards] = useState([]);
+  const [correctPercentage, setCorrectPercentage] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -52,9 +54,18 @@ function App() {
         setCards(gameOptions.find((gameOption) => gameOption.name === game).cards);
       }
 
+      if (section === "end") {
+        setCorrectPercentage((correctAnswers / cards.length) * 100);
+        setLoading(true);
+
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      }
+
       setSection(section);
     },
-    [gameOptions]
+    [gameOptions, cards]
   );
 
   return (
@@ -62,7 +73,7 @@ function App() {
       <Page loading={loading}>
         {section === "home" && <Home changeSection={handleSectionChange} gameOptions={gameOptions} />}
         {section === "game" && <Game changeSection={handleSectionChange} cards={cards} />}
-        {section === "end" && <h1>End</h1>}
+        {section === "end" && <End correctPercentage={correctPercentage} />}
       </Page>
     </>
   );
